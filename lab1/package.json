@@ -1,0 +1,20 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "Reviewing API Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node ./tasks/seed.js",
+    "start": "node ./app.js"
+  },
+  "type": "module", 
+  "author": "Ziheng Zhu",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.13.0"
+  }
+}
