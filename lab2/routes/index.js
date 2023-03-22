@@ -224,7 +224,7 @@ router.post('/recipes/:id/likes', authentication_Middleware, async (req, res) =>
 const findRecipesInCache = async (req, res, next) => {
     let page = req.query.page
     if (page == undefined) {
-        page = 1
+        page = '1'
     }
     let result = await client.hGet("pages", page);
     //client.expire("pages", 15)
