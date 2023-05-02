@@ -1,0 +1,29 @@
+type Query {
+  locationPosts(pageNum: Int): [Location]
+  visitedLocations: [Location]
+  userPostedLocations: [Location]
+}
+
+type Mutation {
+  uploadLocation(image: String!, address: String!, name: String!): Location
+
+  updateLocation(
+    id: ID!, 
+    image: String, 
+    name: String, 
+    address: String, 
+    userPosted: Boolean, 
+    liked: Boolean
+    ): Location
+
+  deleteLocation(id: ID!): Location
+}
+
+type Location {
+    id: ID!
+    image: String!
+    name: String!
+    address: String
+    userPosted: Boolean!
+    liked: Boolean!
+}
