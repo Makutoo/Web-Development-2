@@ -1,0 +1,14 @@
+type Query {
+  characters(pageNum: Int!): [Character]
+  character(id: ID!): Character
+  searchCharacters(term: String!): [Character]
+  
+}
+
+type Character {
+    id: ID!
+    image: String!
+    name: String!
+    description: String
+    modified: String
+}
